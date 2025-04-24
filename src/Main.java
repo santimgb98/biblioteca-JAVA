@@ -58,13 +58,16 @@ public class Main {
                 case 3: {// Pedir libro
                     System.out.println("Selecciona libro por su orden: ");
                     System.out.println(biblioteca);
-                    int disponibilidad = sc.nextInt();
+                    int libroAPrestar = sc.nextInt();
 
-                    biblioteca.pedirLibro(disponibilidad);
+                    biblioteca.pedirLibro(libroAPrestar);
                 }
                 break;
                 case 4: {// Devolver libro
+                    System.out.println("Selecciona el libro a devolver: ");
+                    int libroADevolver = sc.nextInt();
 
+                    biblioteca.devolverLibro(libroADevolver);
 
                 }break;
                 case 5:{// Listar usuarios
