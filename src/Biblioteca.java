@@ -20,8 +20,23 @@ public class Biblioteca {
             System.out.println(((i+1+". ")+listaUsuarios.get(i).getNombre()));
         }
     }
-    public void pedirLibro(){
+    public void seeBooks(){
+        for( int i=0 ; i<listaLibros.size(); i++){
+            String disponibilidad = null;
+            if(listaLibros.get(i).isDisponible() == true){
+                disponibilidad = "disponible";
+            }else{disponibilidad = "NO disponible";}
+            System.out.println(((i+1+". ")+listaLibros.get(i).getNombre())+", "+disponibilidad);
+        }
+    }
+    public boolean pedirLibro(int nuevoValor){
 
+        boolean disponibilidad = false;
+        // Cambia el atributo de disponible del libro elegido a no disponible
+        for( int i=0 ; i<listaLibros.size(); i++){
+            disponibilidad = listaLibros.get(nuevoValor-1).isDisponible();
+        }
+        return disponibilidad;
     }
     @Override
     public String toString(){

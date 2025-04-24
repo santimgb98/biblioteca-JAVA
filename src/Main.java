@@ -15,10 +15,12 @@ public class Main {
             System.out.println("2. Registrar usuario");
             System.out.println("3. Prestar libro");
             System.out.println("4. Devolver libro");
+            System.out.println("5. Listar usuarios");
+            System.out.println("6. Listar libros");
 
             int selection = sc.nextInt();
 
-            while(selection < 1 || selection > 5){
+            while(selection < 1 || selection > 6){
                 System.out.println("Selecciona una opción existente");
                 selection = sc.nextInt();
             }
@@ -54,20 +56,22 @@ public class Main {
                 }
                 break;
                 case 3: {// Pedir libro
-                    System.out.println(biblioteca);
                     System.out.println("Selecciona libro por su orden: ");
-                    int seleccionLibro = sc.nextInt();
+                    System.out.println(biblioteca);
+                    int disponibilidad = sc.nextInt();
 
-
-
+                    biblioteca.pedirLibro(disponibilidad);
                 }
                 break;
                 case 4: {// Devolver libro
 
 
                 }break;
-                case 5:{
+                case 5:{// Listar usuarios
                     biblioteca.seeUsers();
+                }break;
+                case 6:{// Listar libros
+                    biblioteca.seeBooks();
                 }break;
             }
         }
