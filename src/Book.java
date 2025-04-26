@@ -7,14 +7,17 @@ public class Book {
     public int year;
     public int allUnits;
     public boolean available;
+    public boolean availableFalse = false;
 
-    public Book (String isbn, String name, String author, int year , int allUnits, boolean available){
+    public Book (String isbn, String name, String author, int year , int allUnits, boolean available, boolean availableFalse){
         this.isbn = isbn;
         this.name = name;
         this.author = author;
         this.year = year;
         this.allUnits = allUnits;
         this.available = available;
+        this.availableFalse = availableFalse;
+
     }
 
     public String getIsbn() {
@@ -37,6 +40,10 @@ public class Book {
 
     public boolean isAvailable() {
         return available;
+    }
+
+    public boolean isAvailableFalse() {
+        return availableFalse;
     }
 
     public void setIsbn(String isbn) {
@@ -63,7 +70,9 @@ public class Book {
         this.available = available;
     }
 
-
+    public void setAvailableFalse(boolean availableFalse) {
+        this.availableFalse = availableFalse;
+    }
 
     @Override
     public String toString(){

@@ -42,7 +42,7 @@ public class Main {
                     int allUnits = sc.nextInt();
                     boolean available = true;
 
-                    library.addBook(isbn,bookName, bookAuthor,bookYear,allUnits,available);
+                    library.addBook(isbn,bookName, bookAuthor,bookYear,allUnits,available,available);
 
                 }
                 break;
@@ -67,10 +67,12 @@ public class Main {
                 }
                 break;
                 case 4: {// Return book
+                    System.out.println(library);
                     System.out.println("Select a book to return: ");
                     int bookToBeReturned = sc.nextInt();
-
                     library.returnBook(bookToBeReturned);
+
+
 
                 }break;
                 case 5:{// List users
