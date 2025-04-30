@@ -48,7 +48,7 @@ public class Library {
     public String toString(){
         String mostrarBook = null;
         for( int i=0 ; i<bookList.size(); i++){
-            mostrarBook = ((i+1+". ")+bookList.get(i).getName()+", "+bookList.get(i).isAvailable());
+            mostrarBook = ((i+1+". ")+bookList.get(i).getName()+", Available: "+bookList.get(i).isAvailable());
         }
         return mostrarBook;
     }
