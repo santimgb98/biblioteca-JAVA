@@ -19,19 +19,6 @@ public class Library {
         userList.add(new User(nameUser, surnameUser, dniUser, BooksPrestados));
     }
 
-    // METHOD TO LIST USERS
-    public void seeUsers(){
-        for( int i=0 ; i<userList.size(); i++){
-            System.out.println(((i+1+". ")+userList.get(i).getName()+" "+userList.get(i).getSurname()));
-        }
-    }
-
-    // METHOD TO LIST BOOKS
-    public void seeBooks(){
-        for( int i=0 ; i<bookList.size(); i++){
-            System.out.println(((i+1+". ")+bookList.get(i).getName()+" "+bookList.get(i).isAvailable()));
-        }
-    }
 
     // METHOD TO CHANGE AVAILABILITY BOOKS
     public boolean changeAvailability(int bookIndex) {
