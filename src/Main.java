@@ -17,13 +17,11 @@ public class Main {
             System.out.println("2. Register user");
             System.out.println("3. Lend book");
             System.out.println("4. Return book");
-            System.out.println("5. List users");
-            System.out.println("6. List books");
             System.out.println("--------------------------------");
 
             int selection = sc.nextInt();
 
-            while(selection < 1 || selection > 6){
+            while(selection < 1 || selection > 4){
                 System.out.println("Select a existing option: ");
                 selection = sc.nextInt();
             }
@@ -42,7 +40,7 @@ public class Main {
                     int allUnits = sc.nextInt();
                     boolean available = true;
 
-                    library.addBook(isbn,bookName, bookAuthor,bookYear,allUnits,available,available);
+                    library.addBook(isbn,bookName, bookAuthor,bookYear,allUnits,available);
 
                 }
                 break;
@@ -63,23 +61,16 @@ public class Main {
                     System.out.println(library);
                     int bookToBeLend = sc.nextInt();
 
-                    library.lendBook(bookToBeLend);
+                    library.changeAvailability(bookToBeLend);
                 }
                 break;
                 case 4: {// Return book
-                    System.out.println(library);
                     System.out.println("Select a book to return: ");
+                    System.out.println(library);
                     int bookToBeReturned = sc.nextInt();
-                    library.returnBook(bookToBeReturned);
 
+                    library.changeAvailability(bookToBeReturned);
 
-
-                }break;
-                case 5:{// List users
-                    library.seeUsers();
-                }break;
-                case 6:{// List books
-                    library.seeBooks();
                 }break;
             }
         }
